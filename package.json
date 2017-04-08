@@ -1,0 +1,19 @@
+{
+  "name": "typeof",
+  "version": "0.0.0",
+  "description": "A library that intuitively identifies a variable\\'s type.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pddivine/typeOf.git"
+  },
+  "author": "Patrick Divine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pddivine/typeOf/issues"
+  },
+  "homepage": "https://github.com/pddivine/typeOf#readme"
+}

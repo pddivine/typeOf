@@ -25,5 +25,3 @@ function typeOf (val) {
   // typeof
   return typeof val;
 }
-
-console.log(typeOf(null))

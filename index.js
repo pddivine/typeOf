@@ -17,6 +17,7 @@ function typeOf (val) {
     case Boolean  : return 'boolean';
     case Function : return 'function';
     case Number   : return 'number';
+    case Object   : return 'object';
     case String   : return 'string';
     case Symbol   : return 'symbol';
   }

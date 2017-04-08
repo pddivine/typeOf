@@ -13,5 +13,6 @@ Returns intuitive type of a variable. For example, the native 'typeof' function 
 * Boolean  - Returns 'boolean'
 * Function - Returns 'function'
 * Number   - Returns 'number'
+* Object   - Returns 'object'
 * String   - Returns 'string'
 * Symbol   - Returns 'symbol'

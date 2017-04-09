@@ -1,5 +1,18 @@
 module.exports = typeOf;
 
+const TYPE_MAP = {
+  array: Array,
+  boolean: Boolean,
+  function: Function,
+  null: null,
+  number: Number,
+  object: Object,
+  string: String,
+  symbol: Symbol,
+  undefined: undefined,
+};
+const CONSTRUCTOR_LIST = [Array, Boolean, Function, Number, Object, String, Symbol];
+
 /**
  * Determine an intuitive response when querying a variable's type.
  * 
@@ -7,21 +20,13 @@ module.exports = typeOf;
  * @returns {String} An intuitive determination of a variable's type.
  */
 function typeOf (val) {
-  // Handle exceptions to typeof
-  if (val === null) { return 'null'; }
-  if (Array.isArray(val)) { return 'array'; }
-
   // Handle constructors
-  switch (val) {
-    case Array    : return 'array';
-    case Boolean  : return 'boolean';
-    case Function : return 'function';
-    case Number   : return 'number';
-    case Object   : return 'object';
-    case String   : return 'string';
-    case Symbol   : return 'symbol';
-  }
+  if (CONSTRUCTOR_LIST.includes(val)) { return val; }
+
+  // Handle exceptions to typeof
+  if (val === null) { return TYPE_MAP.null; }
+  if (Array.isArray(val)) { return TYPE_MAP.array; }
   
   // typeof
-  return typeof val;
+  return TYPE_MAP[typeof val];
 }

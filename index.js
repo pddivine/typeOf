@@ -22,21 +22,27 @@ const CONSTRUCTOR_LIST = [Array, Boolean, Function, Number, Object, String, Symb
 function typeOf (val, options) {
   // Fail fast
   if (options && typeOf(options) !== Object) { return console.log(`Lib typeOf: Parameter 'options' must be an Object.`); }
-  const asText = options && options.asText ? true : false;
+  const asString = options && options.asString ? true : false;
 
   // Handle constructors
-  if (CONSTRUCTOR_LIST.includes(val)) { return asText ? makeAsText(val) : val; }
+  if (CONSTRUCTOR_LIST.includes(val)) { return asString ? typeToString(val) : val; }
 
   // Handle exceptions to typeof
-  if (val === null) { return asText ? makeAsText(TYPE_MAP.null) : TYPE_MAP.null; }
-  if (Array.isArray(val)) { return asText ? makeAsText(TYPE_MAP.array) : TYPE_MAP.array; }
+  if (val === null) { return asString ? typeToString(TYPE_MAP.null) : TYPE_MAP.null; }
+  if (Array.isArray(val)) { return asString ? typeToString(TYPE_MAP.array) : TYPE_MAP.array; }
   
   // typeof
-  return asText ? makeAsText(TYPE_MAP[typeof val]) : TYPE_MAP[typeof val];
+  return asString ? typeToString(TYPE_MAP[typeof val]) : TYPE_MAP[typeof val];
 }
 
-function makeAsText (v) {
-  if ( v === null ) { return 'Null'; }
-  if ( v === undefined ) { return 'Undefined'; }
-  return v.name;
+/**
+ * Convert type to string
+ * 
+ * @param {any} type Any type in TYPE_MAP.
+ * @returns {string} The type converted to a string.
+ */
+function typeToString (type) {
+  if ( type === null ) { return 'Null'; }
+  if ( type === undefined ) { return 'Undefined'; }
+  return type.name;
 }

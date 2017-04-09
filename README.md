@@ -19,7 +19,7 @@ const tests = [
   undefined
 ];
 
-tests.forEach(v => console.log(typeOf(v, { asText: true })))
+tests.forEach(v => console.log(typeOf(v, { asString: true })))
 
 /** PRINTS
 * 'string'

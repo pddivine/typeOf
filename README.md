@@ -39,7 +39,7 @@ The native 'typeof' function also returns a string response for the type. The ty
 | Symbol            | Itself                  |
 
 ## Evaluating a Special Value Returns Itself
-| Input Constructor | Return Value            |
+| Special Value     | Return Value            |
 | ----------------- | ----------------------- |
 | Null              | Itself                  |
 | Undefined         | Itself                  |

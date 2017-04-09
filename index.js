@@ -19,14 +19,37 @@ const CONSTRUCTOR_LIST = [Array, Boolean, Function, Number, Object, String, Symb
  * @param {any} val
  * @returns {String} An intuitive determination of a variable's type.
  */
-function typeOf (val) {
+function typeOf (val, options) {
+  // Fail fast
+  if (options && typeOf(options) !== Object) { return console.log(`Lib typeOf: Parameter 'options' must be an Object.`); }
+  const asText = options && options.asText ? true : false;
+
   // Handle constructors
-  if (CONSTRUCTOR_LIST.includes(val)) { return val; }
+  if (CONSTRUCTOR_LIST.includes(val)) { return asText ? makeAsText(val) : val; }
 
   // Handle exceptions to typeof
-  if (val === null) { return TYPE_MAP.null; }
-  if (Array.isArray(val)) { return TYPE_MAP.array; }
+  if (val === null) { return asText ? makeAsText(TYPE_MAP.null) : TYPE_MAP.null; }
+  if (Array.isArray(val)) { return asText ? makeAsText(TYPE_MAP.array) : TYPE_MAP.array; }
   
   // typeof
-  return TYPE_MAP[typeof val];
+  return asText ? makeAsText(TYPE_MAP[typeof val]) : TYPE_MAP[typeof val];
 }
+
+function makeAsText (v) {
+  if ( v === null ) { return 'Null'; }
+  if ( v === undefined ) { return 'Undefined'; }
+  return v.name;
+}
+
+const tests = [
+  '',
+  1,
+  {},
+  [],
+  true,
+  function x () {},
+  null,
+  undefined
+];
+
+tests.forEach(v => console.log(typeOf(v, { asText: true })))

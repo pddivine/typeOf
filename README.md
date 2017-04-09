@@ -19,7 +19,7 @@ const tests = [
   undefined
 ];
 
-// Using 'asString: true' option
+// Using 'asString: true' option.
 tests.forEach(v => console.log(typeOf(v, { asString: true })));
 
 /** PRINTS

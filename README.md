@@ -6,6 +6,7 @@ Returns intuitive type of a variable. For example, the native 'typeof' function 
 
 ## Variance From Native 'typeof'
 The native 'typeof' function has these two correct, but unintuitive, responses.
+
 | Input Value Type | Return Value |
 | ---------------- | ------------ |
 | Array            | 'object'     |

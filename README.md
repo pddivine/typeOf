@@ -20,12 +20,12 @@ The native 'typeof' function also returns a string response for the type. The ty
 | Array            | Array Constructor       |
 | Boolean          | Boolean Constructor     |
 | Function         | Function Constructor    |
-| null             | Special value null      |
+| null             | Special Value Null      |
 | Number           | Number Constructor      |
 | Object           | Object Constructor      |
 | String           | String Constructor      |
 | Symbol           | Symbol Constructor      |
-| undefined        | Special value undefined |
+| undefined        | Special Value Undefined |
 
 ## Evaluating a Constructor or Specaial Value Returns Itself
 | Input Constructor | Return Value            |

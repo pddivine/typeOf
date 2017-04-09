@@ -4,6 +4,35 @@ A library that intuitively identifies a variable's type and return the coorespon
 ## Features
 Returns intuitive type of a variable. For example, the native 'typeof' function will return 'object' when detecting the type of an array variable. This typeOf library would return the native Array object constructor in this case.
 
+## TLDR;
+```javascript
+const typeOf = require('typeof');
+
+const tests = [
+  '',
+  1,
+  {},
+  [],
+  true,
+  function x () {},
+  null,
+  undefined
+];
+
+tests.forEach(v => console.log(typeOf(v, { asText: true })))
+
+/** PRINTS
+* 'string'
+* 'number'
+* 'object'
+* 'array'
+* 'boolean'
+* 'function'
+* 'null'
+* 'undefined'
+*/
+```
+
 ## Variance From Native 'typeof'
 The native 'typeof' function has these two correct, but unintuitive, responses.
 

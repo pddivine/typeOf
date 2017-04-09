@@ -19,7 +19,8 @@ const tests = [
   undefined
 ];
 
-tests.forEach(v => console.log(typeOf(v, { asString: true })))
+// Using 'asString: true' option
+tests.forEach(v => console.log(typeOf(v, { asString: true })));
 
 /** PRINTS
 * 'string'
@@ -30,6 +31,20 @@ tests.forEach(v => console.log(typeOf(v, { asString: true })))
 * 'function'
 * 'null'
 * 'undefined'
+*/
+
+// Normal, without config option.
+tests.forEach(v => console.log(typeOf(v)));
+
+/** PRINTS
+* String constructor
+* Number constructor
+* Object constructor
+* Array constructor
+* Boolean constructor
+* Function constructor
+* null
+* undefined
 */
 ```
 

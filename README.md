@@ -7,10 +7,10 @@ Returns intuitive type of a variable. For example, the native 'typeof' function 
 ## Variance From Native 'typeof'
 The native 'typeof' function has these two correct, but unintuitive, responses.
 
-| Input Value Type | Return Value |
-| ---------------- | ------------ |
-| Array            | 'object'     |
-| Null             | 'object'     |
+| Input Value Type | Return Value              |
+| ---------------- | ------------------------- |
+| Array            | String Value 'object'     |
+| Null             | String Value 'object'     |
 
 The native 'typeof' function also returns a string response for the type. The typeOf library will instead return the cooresponding constructor or special value to the identified input type.
 

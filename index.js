@@ -40,16 +40,3 @@ function makeAsText (v) {
   if ( v === undefined ) { return 'Undefined'; }
   return v.name;
 }
-
-const tests = [
-  '',
-  1,
-  {},
-  [],
-  true,
-  function x () {},
-  null,
-  undefined
-];
-
-tests.forEach(v => console.log(typeOf(v, { asText: true })))

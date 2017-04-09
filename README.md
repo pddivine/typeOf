@@ -17,14 +17,14 @@ The native 'typeof' function also returns a string response for the type. The ty
 ## TypeOf Library Evaluation of Type
 | Input Value Type | Return Value            |
 | ---------------- | ----------------------- |
-| Array            | Array constructor       |
-| Boolean          | Boolean constructor     |
-| Function         | Function constructor    |
-| Number           | Number constructor      |
-| Object           | Object constructor      |
-| String           | String constructor      |
-| Symbol           | Symbol constructor      |
+| Array            | Array Constructor       |
+| Boolean          | Boolean Constructor     |
+| Function         | Function Constructor    |
 | null             | Special value null      |
+| Number           | Number Constructor      |
+| Object           | Object Constructor      |
+| String           | String Constructor      |
+| Symbol           | Symbol Constructor      |
 | undefined        | Special value undefined |
 
 ## Evaluating a Constructor or Specaial Value Returns Itself

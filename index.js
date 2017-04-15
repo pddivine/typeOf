@@ -44,7 +44,7 @@ function typeOf (val, options) {
  * @returns {string} The type converted to a string.
  */
 function typeToString (type) {
-  if ( type === null ) { return 'Null'; }
-  if ( type === undefined ) { return 'Undefined'; }
-  return type.name;
+  if ( type === null ) { return 'null'; }
+  if ( type === undefined ) { return 'undefined'; }
+  return type.name.toLowerCase();
 }

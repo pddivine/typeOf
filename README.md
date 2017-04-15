@@ -14,6 +14,7 @@ const tests = [
   {},
   [],
   true,
+  new Date();
   function x () {},
   null,
   undefined
@@ -28,6 +29,7 @@ tests.forEach(v => console.log(typeOf(v, { asString: true })));
 * 'object'
 * 'array'
 * 'boolean'
+* 'date'
 * 'function'
 * 'null'
 * 'undefined'
@@ -42,6 +44,7 @@ tests.forEach(v => console.log(typeOf(v)));
 * Object constructor
 * Array constructor
 * Boolean constructor
+* Date constructor
 * Function constructor
 * null
 * undefined
@@ -63,6 +66,7 @@ The native 'typeof' function also returns a string response for the type. The ty
 | ---------------- | ----------------------- |
 | Array            | Array Constructor       |
 | Boolean          | Boolean Constructor     |
+| Date             | Date Constructor        |
 | Function         | Function Constructor    |
 | Null             | Special Value Null      |
 | Number           | Number Constructor      |
@@ -76,6 +80,7 @@ The native 'typeof' function also returns a string response for the type. The ty
 | ----------------- | ----------------------- |
 | Array             | Itself                  |
 | Boolean           | Itself                  |
+| Date              | Itself                  |
 | Function          | Itself                  |
 | Number            | Itself                  |
 | Object            | Itself                  |

@@ -14,7 +14,7 @@ const tests = [
   {},
   [],
   true,
-  new Date();
+  new Date(),
   function x () {},
   null,
   undefined

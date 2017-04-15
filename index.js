@@ -3,15 +3,16 @@ module.exports = typeOf;
 const TYPE_MAP = {
   array: Array,
   boolean: Boolean,
+  date: Date,
   function: Function,
   null: null,
   number: Number,
   object: Object,
   string: String,
   symbol: Symbol,
-  undefined: undefined,
+  undefined: undefined
 };
-const CONSTRUCTOR_LIST = [Array, Boolean, Function, Number, Object, String, Symbol];
+const CONSTRUCTOR_LIST = [Array, Boolean, Date, Function, Number, Object, String, Symbol];
 
 /**
  * Determine an intuitive response when querying a variable's type.
@@ -30,6 +31,7 @@ function typeOf (val, options) {
   // Handle exceptions to typeof
   if (val === null) { return asString ? typeToString(TYPE_MAP.null) : TYPE_MAP.null; }
   if (Array.isArray(val)) { return asString ? typeToString(TYPE_MAP.array) : TYPE_MAP.array; }
+  if (val instanceof Date) { return asString ? typeToString(TYPE_MAP.date) : TYPE_MAP.date; }
   
   // typeof
   return asString ? typeToString(TYPE_MAP[typeof val]) : TYPE_MAP[typeof val];

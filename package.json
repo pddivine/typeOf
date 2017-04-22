@@ -4,8 +4,7 @@
   "description": "A library that intuitively identifies a variable\\'s type.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter dot",
-    "testVerbose": "mocha"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

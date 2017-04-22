@@ -85,22 +85,22 @@ describe (`The 'typeOf' library`, function () {
     });
 
     describe('and checking constructor/special value', function () {
-      describe('array', function () {
+      describe('Array', function () {
         it('should return the String constructor.', function () {
           expect(typeOf(example.constructor.array)).to.equal(Array);
         });
       });
-      describe('boolean', function () {
+      describe('Boolean', function () {
         it('should return the Boolean constructor.', function () {
           expect(typeOf(example.constructor.boolean)).to.equal(Boolean);
         });
       });
-      describe('date', function () {
+      describe('Date', function () {
         it('should return the Date constructor.', function () {
           expect(typeOf(example.constructor.date)).to.equal(Date);
         });
       });
-      describe('function', function () {
+      describe('Function', function () {
         it('should return the Function constructor.', function () {
           expect(typeOf(example.constructor.function)).to.equal(Function);
         });
@@ -110,22 +110,22 @@ describe (`The 'typeOf' library`, function () {
           expect(typeOf(example.constructor.null)).to.equal(null);
         });
       });
-      describe('number', function () {
+      describe('Number', function () {
         it('should return the Number constructor.', function () {
           expect(typeOf(example.constructor.number)).to.equal(Number);
         });
       });
-      describe('object', function () {
+      describe('Object', function () {
         it('should return the Object constructor.', function () {
           expect(typeOf(example.constructor.object)).to.equal(Object);
         });
       });
-      describe('string', function () {
+      describe('String', function () {
         it('should return the String constructor.', function () {
           expect(typeOf(example.constructor.string)).to.equal(String);
         });
       });
-      describe('symbol', function () {
+      describe('Symbol', function () {
         it('should return the Symbol constructor.', function () {
           expect(typeOf(example.constructor.symbol)).to.equal(Symbol);
         });

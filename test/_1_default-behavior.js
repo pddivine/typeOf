@@ -130,7 +130,7 @@ describe (`The 'typeOf' library`, function () {
           expect(typeOf(example.constructor.symbol)).to.equal(Symbol);
         });
       });
-      describe(' undefined', function () {
+      describe('undefined', function () {
         it('should return the undefined value.', function () {
           expect(typeOf(example.constructor.undefined)).to.equal(undefined);
         });

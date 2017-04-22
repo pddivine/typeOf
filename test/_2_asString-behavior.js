@@ -135,7 +135,7 @@ describe (`The 'typeOf' library`, function () {
           expect(typeOfAsString(example.constructor.symbol)).to.equal('symbol');
         });
       });
-      describe(' undefined', function () {
+      describe('undefined', function () {
         it('should return the undefined value.', function () {
           expect(typeOfAsString(example.constructor.undefined)).to.equal('undefined');
         });

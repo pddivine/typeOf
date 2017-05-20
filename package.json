@@ -1,5 +1,5 @@
 {
-  "name": "typeof",
+  "name": "typeof.pddivine",
   "version": "0.0.0",
   "description": "A library that intuitively identifies a variable\\'s type.",
   "main": "index.js",
@@ -8,14 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pddivine/typeOf.git"
+    "url": "git+https://github.com/pddivine/typeOf.pddivine.git"
   },
   "author": "Patrick Divine",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pddivine/typeOf/issues"
+    "url": "https://github.com/pddivine/typeOf.pddivine/issues"
   },
-  "homepage": "https://github.com/pddivine/typeOf#readme",
+  "files": [
+    "LICENSE",
+    "index.js"
+  ],
+  "homepage": "https://github.com/pddivine/typeOf.pddivine#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0"

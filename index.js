@@ -25,9 +25,6 @@ function typeOf (val, options) {
   if (options && typeOf(options) !== Object) { return console.log(`Lib typeOf: Parameter 'options' must be an Object.`); }
   const asString = options && options.asString ? true : false;
 
-  // Handle constructors
-  if (CONSTRUCTOR_LIST.includes(val)) { return asString ? typeToString(val) : val; }
-
   // Handle exceptions to typeof
   if (val === null) { return asString ? typeToString(TYPE_MAP.null) : TYPE_MAP.null; }
   if (Array.isArray(val)) { return asString ? typeToString(TYPE_MAP.array) : TYPE_MAP.array; }

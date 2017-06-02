@@ -1,4 +1,4 @@
-# typeOf
+# typeOf.pddivine
 A library that intuitively identifies a variable's type and return the cooresponding type constructor or special value.
 
 ## Features
@@ -6,7 +6,7 @@ Returns intuitive type of a variable. For example, the native 'typeof' function 
 
 ## TLDR;
 ```javascript
-const typeOf = require('typeof');
+const typeOf = require('typeof.pddivine');
 
 const tests = [
   '',
@@ -74,18 +74,6 @@ The native 'typeof' function also returns a string response for the type. The ty
 | String           | String Constructor      |
 | Symbol           | Symbol Constructor      |
 | Undefined        | Special Value Undefined |
-
-## Evaluating a Constructor Returns Itself
-| Input Constructor | Return Value            |
-| ----------------- | ----------------------- |
-| Array             | Itself                  |
-| Boolean           | Itself                  |
-| Date              | Itself                  |
-| Function          | Itself                  |
-| Number            | Itself                  |
-| Object            | Itself                  |
-| String            | Itself                  |
-| Symbol            | Itself                  |
 
 ## Evaluating a Special Value Returns Itself
 | Special Value     | Return Value            |

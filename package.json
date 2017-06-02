@@ -1,6 +1,6 @@
 {
   "name": "typeof.pddivine",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A library that intuitively identifies a variable's type.",
   "main": "index.js",
   "scripts": {
